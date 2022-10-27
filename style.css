@@ -6,7 +6,7 @@ html, body {
 }
 
 #wrapper {
-  min-height: 100%
+  min-height: 100%;
   position: relative;
 }
 
@@ -53,7 +53,7 @@ input#search-box:focus {
   margin-top: 30px;
 }
 
-input[type="submit"] {
+a.button{
   background-color: #F2F2F2;
   border: 1px solid #F2F2F2;
   border-radius: 2px;
@@ -65,7 +65,7 @@ input[type="submit"] {
   margin: 0 2px;
 }
 
-input[type="submit"]:hover {
+a.button:hover {
   border-color: #C6C6C6;
   background-color: #F8F8F8;
   color: #222;
@@ -182,4 +182,62 @@ a:hover {
 #footer-right {
   float: right;
   padding-right: 27px;
+}
+
+/* slider */
+.slider {
+  width: 700px;
+  height: 900px;
+  background-color: yellow;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  text-align: center;
+  overflow: hidden;
+}
+.image-container {
+  width: 4200px;
+  background-color: pink;
+  height: 300px;
+  clear: both;
+  position: relative;
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s;
+}
+.slide {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+#slide-1:target ~ .image-container {
+  left: 0px;
+}
+#slide-2:target ~ .image-container {
+  left: -700px;
+}
+#slide-3:target ~ .image-container {
+  left: -1400px;
+}
+#slide-4:target ~ .image-container {
+  left: -2100px;
+}
+#slide-5:target ~ .image-container {
+  left: -2800px;
+}
+#slide-6:target ~ .image-container {
+  left: -3500px;
+}
+.buttons {
+  position: relative;
+  top: -70px;
+}
+.buttons a {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background-color: lightgreen;
 }
